@@ -1,7 +1,6 @@
 (ns overtone-clj-toys.synths
   (:use [overtone.live]))
 
-
 ;; Tuned-Detuned Synth
 ;;
 ;; Mouse X direction controls the base frequency
@@ -29,15 +28,14 @@
     (out 0 :signals (pan2
                      (* amp (lpf:ar signal (mouse-y 500 4000 EXP)))
                      :pos (* 0.75 lfo-pan) ; Reduce Panning
-                     )))) 
+                     ))))
 
 ;; View the output, it's pretty!
-(scope :bus 0)
-(scope :bus 1)
+;; (scope :bus 0)
+;; (scope :bus 1)
 
 ;; Move mouse to the upper left to hear the "base" sound.
 ;; Reminiscent of a Boards of Canada type drone synth
-(tdt-synth :freq 150
-           :amp 0.8
-           :pan-rate 0.24)
-(stop)
+;;
+;; (tdt-synth :freq 150 :amp 0.8 :pan-rate 0.24)
+;; (stop)

@@ -38,7 +38,3 @@
 
 (definst beep [] (sin-osc:ar 30))
 (definst beep [] (* 0.5 (+ (square 60) (sin-osc 100))))
-
-
-
-
